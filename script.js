@@ -556,6 +556,8 @@ function updateKPIs(){
     : `O projeto apresenta desvio negativo de progresso e precisa manter o plano de recuperação para proteger o prazo final.`;
   qs('#baseCost').textContent = fmtMoney(DATA.baseCost);
   qs('#revisedCost').textContent = fmtMoney(DATA.revisedCost);
+  qs('#costVariation').textContent = `+${fmtMoney(DATA.costDelta)}`;
+  qs('#costVariationPct').textContent = `+${DATA.costDeltaPct}% sobre o custo-base`;
   qs('#costDeltaBar').style.width = `${clamp(DATA.costDeltaPct * 18, 8, 100)}%`;
   qs('#costInsight').textContent = `A mudança RA3 adicionou ${fmtMoney(DATA.costDelta)} ao custo-base, principalmente pela substituição da ferramenta gratuita por solução paga de apoio.`;
   qs('#doneCount').textContent = DATA.doneTasks;
@@ -729,6 +731,7 @@ function revealOnScroll(){
 function init(){
   updateHero();
   updateKPIs();
+  bindTooltips();
   renderTimelineAxis();
   renderGantt();
   renderMilestones();

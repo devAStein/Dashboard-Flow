@@ -164,10 +164,15 @@ h2{margin:0; font-size:24px; letter-spacing:-.03em}
 }
 .meter.planned span{background:linear-gradient(90deg,var(--yellow),var(--orange))}
 .insight{color:var(--muted); line-height:1.65; margin:18px 0 0}
-.cost-visual{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-.cost-visual div{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); padding:16px; border-radius:18px}
+.cost-visual{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.cost-visual div{position:relative; overflow:hidden; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); padding:16px; border-radius:18px; transition:.22s ease}
 .cost-visual span{display:block; color:var(--muted); font-size:12px; font-weight:800; text-transform:uppercase; margin-bottom:8px}
 .cost-visual strong{font-size:20px}
+.cost-visual div:hover{transform:translateY(-4px); border-color:rgba(56,189,248,.34); background:rgba(255,255,255,.08)}
+.cost-variation-card{background:linear-gradient(180deg, rgba(251,191,36,.16), rgba(251,146,60,.08))!important; border-color:rgba(251,191,36,.24)!important; cursor:help}
+.cost-variation-card::after{content:""; position:absolute; right:-34px; bottom:-44px; width:120px; height:120px; border-radius:999px; background:rgba(251,191,36,.14); pointer-events:none}
+.cost-variation-card strong{color:#ffe7a2; position:relative}
+.cost-variation-card small{display:block; margin-top:6px; color:#f8d889; font-size:12px; font-weight:800; position:relative}
 .cost-track{margin-top:18px; height:12px}
 .cost-track span{background:linear-gradient(90deg,var(--green),var(--yellow),var(--orange)); width:30%}
 
@@ -287,6 +292,7 @@ h2{margin:0; font-size:24px; letter-spacing:-.03em}
 
 @media (max-width:1050px){
   .page-shell{width:min(960px, calc(100% - 32px))}
+  .cost-visual{grid-template-columns:1fr 1fr}
   .side-nav{display:none}
   .hero{grid-template-columns:1fr}
   .kpi-grid{grid-template-columns:repeat(2,1fr)}
@@ -294,7 +300,7 @@ h2{margin:0; font-size:24px; letter-spacing:-.03em}
   .risk-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:650px){
-  .kpi-grid,.summary-strip,.risk-grid{grid-template-columns:1fr}
+  .kpi-grid,.summary-strip,.risk-grid,.cost-visual{grid-template-columns:1fr}
   .section-title{display:grid}
   .search{min-width:100%; width:100%}
   .gantt-row{grid-template-columns:1fr}
