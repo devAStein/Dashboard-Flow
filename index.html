@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Executivo RA3 - Projeto Flow</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <aside class="side-nav" aria-label="Navegação do Dashboard">
+    <div class="brand-mini">F</div>
+    <a href="#visao-geral" title="Visão geral">01</a>
+    <a href="#cronograma" title="Cronograma">02</a>
+    <a href="#entregas" title="Entregas">03</a>
+    <a href="#riscos" title="Riscos">04</a>
+    <a href="#acoes" title="Ações">05</a>
+  </aside>
+
+  <main class="page-shell">
+    <header class="hero glass-card reveal" id="visao-geral">
+      <div>
+        <p class="eyebrow">Status Report / Dashboard RA3</p>
+        <h1>Projeto Flow</h1>
+        <p class="hero-text">
+          Painel executivo de acompanhamento do projeto com base na planilha atualizada do Gantt,
+          contemplando progresso, prazo, custo, entregas, riscos, impedimentos e plano de recuperação.
+        </p>
+        <div class="hero-tags">
+          <span class="tag tag-info">Gantt atualizado</span>
+          <span class="tag tag-warning">Plano de recuperação ativo</span>
+          <span class="tag tag-success">Prazo oficial: <strong id="deadlineHero">30/06/2026</strong></span>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="status-pill" id="statusPill">Carregando...</div>
+        <div class="donut-wrap" role="img" aria-label="Progresso do projeto">
+          <div class="donut" id="overallDonut">
+            <div class="donut-center">
+              <strong id="overallValue">0%</strong>
+              <span>concluído</span>
+            </div>
+          </div>
+        </div>
+        <p class="status-note" id="statusNote">Atualizando dados...</p>
+      </div>
+    </header>
+
+    <section class="kpi-grid reveal" aria-label="Indicadores principais">
+      <article class="kpi-card interactive" data-modal="progress">
+        <span class="kpi-icon">↗</span>
+        <p>Progresso real</p>
+        <h2 id="kpiProgress">0%</h2>
+        <small id="kpiProgressSub">Planejado: 52%</small>
+      </article>
+      <article class="kpi-card interactive" data-modal="schedule">
+        <span class="kpi-icon">◷</span>
+        <p>Prazo</p>
+        <h2 id="kpiDeadline">30/06</h2>
+        <small id="kpiDays">19 dias restantes</small>
+      </article>
+      <article class="kpi-card interactive" data-modal="cost">
+        <span class="kpi-icon">R$</span>
+        <p>Custo revisado</p>
+        <h2 id="kpiCost">R$ 0</h2>
+        <small id="kpiCostSub">Variação controlada</small>
+      </article>
+      <article class="kpi-card interactive" data-modal="tasks">
+        <span class="kpi-icon">✓</span>
+        <p>Entregas concluídas</p>
+        <h2 id="kpiTasks">0/0</h2>
+        <small id="kpiTasksSub">tarefas da EAP</small>
+      </article>
+    </section>
+
+    <section class="two-column">
+      <article class="glass-card reveal">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Tendência</p>
+            <h2>Real x planejado</h2>
+          </div>
+          <span class="mini-badge" id="trendBadge">--</span>
+        </div>
+        <div class="progress-comparison">
+          <div>
+            <div class="bar-label">
+              <span>Progresso real no Gantt atualizado</span>
+              <strong id="realLabel">57%</strong>
+            </div>
+            <div class="meter"><span id="realBar"></span></div>
+          </div>
+          <div>
+            <div class="bar-label">
+              <span>Referência planejada RA3</span>
+              <strong id="plannedLabel">52%</strong>
+            </div>
+            <div class="meter planned"><span id="plannedBar"></span></div>
+          </div>
+        </div>
+        <p class="insight" id="progressInsight"></p>
+      </article>
+
+      <article class="glass-card reveal">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Custos</p>
+            <h2>Impacto financeiro</h2>
+          </div>
+          <span class="mini-badge neutral">MUD-RA3</span>
+        </div>
+        <div class="cost-visual">
+          <div>
+            <span>Custo base</span>
+            <strong id="baseCost">R$ 104.524,57</strong>
+          </div>
+          <div>
+            <span>Custo revisado</span>
+            <strong id="revisedCost">R$ 105.844,57</strong>
+          </div>
+        </div>
+        <div class="cost-track">
+          <span id="costDeltaBar"></span>
+        </div>
+        <p class="insight" id="costInsight"></p>
+      </article>
+    </section>
+
+    <section class="glass-card reveal" id="cronograma">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Cronograma</p>
+          <h2>Linha do tempo interativa</h2>
+        </div>
+        <div class="controls">
+          <button class="control active" data-filter="all">Todos</button>
+          <button class="control" data-filter="done">Concluídas</button>
+          <button class="control" data-filter="pending">Pendentes</button>
+          <button class="control" data-filter="critical">Críticas</button>
+        </div>
+      </div>
+      <div class="timeline-axis" id="timelineAxis"></div>
+      <div class="gantt-board" id="ganttBoard"></div>
+      <p class="hint">Passe o mouse sobre as barras para ver responsável, datas e progresso.</p>
+    </section>
+
+    <section class="two-column" id="entregas">
+      <article class="glass-card reveal">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Entregas</p>
+            <h2>Previstas x realizadas</h2>
+          </div>
+        </div>
+        <div id="milestoneList" class="milestone-list"></div>
+      </article>
+
+      <article class="glass-card reveal">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Próximos marcos</p>
+            <h2>Fila de execução</h2>
+          </div>
+        </div>
+        <div id="nextTasks" class="next-list"></div>
+      </article>
+    </section>
+
+    <section class="glass-card reveal">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Atividades</p>
+          <h2>Controle de tarefas e atrasos</h2>
+        </div>
+        <input id="taskSearch" class="search" type="search" placeholder="Buscar tarefa, responsável ou marco..." />
+      </div>
+      <div class="summary-strip">
+        <div><strong id="doneCount">0</strong><span>concluídas</span></div>
+        <div><strong id="pendingCount">0</strong><span>pendentes</span></div>
+        <div><strong id="overdueCount">0</strong><span>atrasadas abertas</span></div>
+      </div>
+      <div class="table-wrap">
+        <table class="task-table">
+          <thead>
+            <tr>
+              <th>EAP / Atividade</th>
+              <th>Responsável</th>
+              <th>Período</th>
+              <th>Status</th>
+              <th>Progresso</th>
+            </tr>
+          </thead>
+          <tbody id="taskTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="glass-card reveal" id="riscos">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Riscos</p>
+          <h2>Principais riscos e severidade</h2>
+        </div>
+        <span class="mini-badge danger">Atenção</span>
+      </div>
+      <div class="risk-grid" id="riskGrid"></div>
+    </section>
+
+    <section class="two-column" id="acoes">
+      <article class="glass-card reveal">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Impedimentos</p>
+            <h2>Problemas atuais</h2>
+          </div>
+        </div>
+        <div class="problem-list">
+          <div class="problem"><strong>Saída de desenvolvedor</strong><span>Capacidade técnica reduzida em banco, migração e integração.</span></div>
+          <div class="problem"><strong>Ferramenta gratuita inadequada</strong><span>Substituição por solução paga com homologação pela TI.</span></div>
+          <div class="problem"><strong>Cronograma comprimido</strong><span>Execução em paralelo para manter prazo oficial de 30/06/2026.</span></div>
+          <div class="problem"><strong>Risco de retrabalho</strong><span>Necessidade de revisão humana e testes reforçados.</span></div>
+        </div>
+      </article>
+
+      <article class="glass-card reveal">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Ações</p>
+            <h2>Plano de recuperação</h2>
+          </div>
+        </div>
+        <div class="accordion" id="actionsAccordion"></div>
+      </article>
+    </section>
+
+    <section class="glass-card reveal image-card">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Referência visual</p>
+          <h2>EAP do projeto</h2>
+        </div>
+      </div>
+      <img src="assets/eap_flow.png" alt="Estrutura Analítica do Projeto Flow" onerror="this.closest('section').style.display='none'" />
+    </section>
+
+    <footer class="footer">
+      Dashboard gerado para o PJBL-RA3 com base na planilha atualizada do Gantt. O prazo oficial permanece em 30/06/2026.
+    </footer>
+  </main>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <dialog class="modal" id="infoModal">
+    <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    <h3 id="modalTitle">Detalhe</h3>
+    <p id="modalBody">Informação do indicador.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
