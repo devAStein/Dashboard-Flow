@@ -15,3 +15,5 @@ Base utilizada:
 
 Observação:
 O dashboard foi feito em HTML, CSS e JavaScript puro, sem depender de internet ou bibliotecas externas.
+
+Atualização: foi incluída uma seção de legenda visual para explicar as cores usadas no dashboard (azul/ciano, verde, amarelo/laranja, vermelho/rosa, cinza e roxo/azul escuro).
