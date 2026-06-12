@@ -9,9 +9,10 @@ const DATA = {
   "statusLabel": "Em atraso / Atenção crítica",
   "statusTone": "warning",
   "baseCost": 104524.57,
-  "revisedCost": 110424.57,
-  "costDelta": 5900.0,
-  "costDeltaPct": 5.64,
+  "revisedCost": 115945.80,
+  "costDelta": 11421.23,
+  "costDeltaPct": 10.93,
+  "contingencyReserve": 5521.23,
   "totalTasks": 14,
   "doneTasks": 6,
   "inProgressTasks": 4,
@@ -382,7 +383,7 @@ const DATA = {
       "impact": "Alto",
       "severity": 12,
       "category": "Custos",
-      "response": "Atualizar baseline de custos, aprovar variação com patrocinador e monitorar custo revisado no status report.",
+      "response": "Atualizar baseline de custos, aprovar variação com patrocinador, controlar a reserva de contingência e monitorar custo revisado no status report.",
       "owner": "Gerente do Projeto"
     },
     {
@@ -411,7 +412,7 @@ const DATA = {
     },
     {
       "title": "Atualizar e controlar o custo revisado",
-      "text": "O custo-base de R$ 104.524,57 foi revisado para R$ 110.424,57, gerando variação de R$ 5.900,00, equivalente a 5,64%."
+      "text": "O custo-base de R$ 104.524,57 foi revisado para R$ 115.945,80, gerando variação de R$ 11.421,23, equivalente a 10,93%, já incluindo reserva de contingência de R$ 5.521,23."
     },
     {
       "title": "Proteger testes, treinamento e implantação",
@@ -569,7 +570,7 @@ function updateKPIs(){
   qs('#kpiDeadline').textContent = DATA.deadline.slice(0,5);
   qs('#kpiDays').textContent = `${DATA.remainingDays} dias restantes`;
   qs('#kpiCost').textContent = fmtMoney(DATA.revisedCost);
-  qs('#kpiCostSub').textContent = `+${fmtMoney(DATA.costDelta)} (${DATA.costDeltaPct}%)`;
+  qs('#kpiCostSub').textContent = `Inclui reserva: ${fmtMoney(DATA.contingencyReserve)}`;
   qs('#kpiTasks').textContent = `${DATA.doneTasks}/${DATA.totalTasks}`;
   qs('#kpiTasksSub').textContent = `${DATA.pendingTasks} pendentes`;
   qs('#realLabel').textContent = `${DATA.overallProgress}%`;
@@ -586,7 +587,7 @@ function updateKPIs(){
   qs('#costVariation').textContent = `+${fmtMoney(DATA.costDelta)}`;
   qs('#costVariationPct').textContent = `+${DATA.costDeltaPct}% sobre o custo-base`;
   qs('#costDeltaBar').style.width = `${clamp(DATA.costDeltaPct * 18, 8, 100)}%`;
-  qs('#costInsight').textContent = `A situação atual adicionou ${fmtMoney(DATA.costDelta)} ao custo-base, envolvendo solução paga substituta e esforço adicional de recuperação/replanejamento.`;
+  qs('#costInsight').textContent = `A situação atual adicionou ${fmtMoney(DATA.costDelta)} ao custo-base, incluindo solução paga substituta, esforço adicional e reserva de contingência de ${fmtMoney(DATA.contingencyReserve)}.`;
   qs('#doneCount').textContent = DATA.doneTasks;
   qs('#pendingCount').textContent = DATA.pendingTasks;
   qs('#overdueCount').textContent = DATA.overdueTasks.length;
@@ -730,7 +731,7 @@ function bindControls(){
     },
     cost: {
       title:'Indicador de custo',
-      body:`O custo revisado é ${fmtMoney(DATA.revisedCost)}. A variação frente ao custo-base é ${fmtMoney(DATA.costDelta)} (${DATA.costDeltaPct}%).`
+      body:`O custo revisado com reserva é ${fmtMoney(DATA.revisedCost)}. A variação frente ao custo-base é ${fmtMoney(DATA.costDelta)} (${DATA.costDeltaPct}%), incluindo reserva de contingência de ${fmtMoney(DATA.contingencyReserve)}.`
     },
     tasks: {
       title:'Entregas previstas x realizadas',

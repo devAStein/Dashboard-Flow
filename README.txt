@@ -10,7 +10,8 @@ Base utilizada:
 - Planilha do Gantt atualizada enviada pelo usuário.
 - Progresso consolidado do Gantt: 42% realizado contra 52% planejado.
 - Prazo oficial mantido: 30/06/2026, com cronograma em atenção.
-- Custo revisado: R$ 110.424,57.
+- Custo revisado com reserva de contingência: R$ 115.945,80.
+- Reserva de contingência incluída: R$ 5.521,23.
 
 Observação:
 O dashboard foi feito em HTML, CSS e JavaScript puro, sem depender de internet ou bibliotecas externas.
