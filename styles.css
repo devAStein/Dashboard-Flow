@@ -104,6 +104,7 @@ h2{margin:0; font-size:24px; letter-spacing:-.03em}
   background:rgba(251,191,36,.14); color:#ffe7a2; border:1px solid rgba(251,191,36,.28)
 }
 .status-pill.ok{background:rgba(52,211,153,.13); color:#bfffe6; border-color:rgba(52,211,153,.28)}
+.status-pill.critical{background:rgba(251,113,133,.14); color:#ffd0d7; border-color:rgba(251,113,133,.34)}
 .donut-wrap{display:grid; place-items:center}
 .donut{
   width:190px; height:190px; border-radius:50%; display:grid; place-items:center;
@@ -244,6 +245,7 @@ h2{margin:0; font-size:24px; letter-spacing:-.03em}
 .status-done{background:rgba(52,211,153,.13); color:#bfffe6}
 .status-pending{background:rgba(148,163,184,.15); color:#dce5f1}
 .status-progress{background:rgba(251,191,36,.13); color:#ffe7a2}
+.status-overdue{background:rgba(251,113,133,.15); color:#ffd0d7}
 .inline-progress{height:8px; background:rgba(255,255,255,.07); border-radius:999px; overflow:hidden; min-width:90px}
 .inline-progress span{display:block; height:100%; background:linear-gradient(90deg,var(--blue),var(--green)); border-radius:999px}
 

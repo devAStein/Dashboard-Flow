@@ -8,9 +8,9 @@ Como usar:
 
 Base utilizada:
 - Planilha do Gantt atualizada enviada pelo usuário.
-- Progresso consolidado do Gantt: 57%.
-- Prazo oficial mantido: 30/06/2026.
-- Custo revisado: R$ 105.844,57.
+- Progresso consolidado do Gantt: 42% realizado contra 52% planejado.
+- Prazo oficial mantido: 30/06/2026, com cronograma em atenção.
+- Custo revisado: R$ 110.424,57.
 
 Observação:
 O dashboard foi feito em HTML, CSS e JavaScript puro, sem depender de internet ou bibliotecas externas.

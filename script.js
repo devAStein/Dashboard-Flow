@@ -1,23 +1,26 @@
 
 const DATA = {
   "project": "Flow",
-  "statusDate": "11/06/2026",
+  "statusDate": "13/06/2026",
   "deadline": "30/06/2026",
-  "overallProgress": 57,
+  "overallProgress": 42,
   "plannedProgress": 52,
-  "deviation": 5,
-  "statusLabel": "Em recuperação",
-  "statusTone": "ok",
+  "deviation": -10,
+  "statusLabel": "Em atraso / Atenção crítica",
+  "statusTone": "warning",
   "baseCost": 104524.57,
-  "revisedCost": 105844.57,
-  "costDelta": 1320.0,
-  "costDeltaPct": 1.26,
+  "revisedCost": 110424.57,
+  "costDelta": 5900.0,
+  "costDeltaPct": 5.64,
   "totalTasks": 14,
-  "doneTasks": 9,
-  "inProgressTasks": 0,
+  "doneTasks": 6,
+  "inProgressTasks": 4,
   "pendingTasks": 5,
-  "overdueTasks": [],
-  "remainingDays": 19,
+  "overdueTasks": [
+    "1.3.2",
+    "1.3.3"
+  ],
+  "remainingDays": 17,
   "tasks": [
     {
       "id": "1.1.1",
@@ -60,10 +63,10 @@ const DATA = {
       "due": "31/05/2026",
       "startISO": "2026-05-29",
       "dueISO": "2026-05-31",
-      "owner": "Claude.IA, Armando",
+      "owner": "Claude.IA, Armando, Matheus Pereira",
       "completion": "10/06/2026",
       "completionISO": "2026-06-10",
-      "hours": "11",
+      "hours": "16.5",
       "duration": "3",
       "group": "Marco 2 - Hardware-cotação e intalação"
     },
@@ -84,7 +87,7 @@ const DATA = {
       "group": "Marco 2 - Hardware-cotação e intalação"
     },
     {
-      "id": "1.4.1",
+      "id": "1.3.1",
       "level": 3,
       "name": "1.3.1.1 Configuração do dispositivo IoT",
       "progress": 100,
@@ -100,39 +103,39 @@ const DATA = {
       "group": "Marco 3 - Desenvolvimento"
     },
     {
-      "id": "1.4.2",
+      "id": "1.3.2",
       "level": 3,
       "name": "1.3.2.1 Modelagem de dados",
-      "progress": 100,
+      "progress": 70,
       "start": "04/06/2026",
       "due": "07/06/2026",
       "startISO": "2026-06-04",
       "dueISO": "2026-06-07",
-      "owner": "Claude.IA, Matheus Lucas",
-      "completion": "11/06/2026",
-      "completionISO": "2026-06-11",
+      "owner": "Substituto pendente",
+      "completion": "-",
+      "completionISO": null,
       "hours": "3",
       "duration": "4",
       "group": "Marco 3 - Desenvolvimento"
     },
     {
-      "id": "1.4.3",
+      "id": "1.3.3",
       "level": 3,
       "name": "1.3.2.2 Configuração do Banco de dados",
-      "progress": 100,
+      "progress": 70,
       "start": "08/06/2026",
       "due": "10/06/2026",
       "startISO": "2026-06-08",
       "dueISO": "2026-06-10",
-      "owner": "Claude.IA, Matheus Lucas",
-      "completion": "11/06/2026",
-      "completionISO": "2026-06-11",
+      "owner": "Substituto pendente",
+      "completion": "-",
+      "completionISO": null,
       "hours": "3",
       "duration": "3",
       "group": "Marco 3 - Desenvolvimento"
     },
     {
-      "id": "1.4.4",
+      "id": "1.3.4",
       "level": 3,
       "name": "1.3.3.1 Design da interface",
       "progress": 100,
@@ -148,35 +151,35 @@ const DATA = {
       "group": "Marco 3 - Desenvolvimento"
     },
     {
-      "id": "1.4.5",
+      "id": "1.3.5",
       "level": 3,
       "name": "1.3.3.2 Desenvolvimento da interface",
-      "progress": 100,
-      "start": "10/06/2026",
-      "due": "11/06/2026",
-      "startISO": "2026-06-10",
-      "dueISO": "2026-06-11",
-      "owner": "Matheus Pereira",
-      "completion": "11/06/2026",
-      "completionISO": "2026-06-11",
-      "hours": "8",
-      "duration": "2",
-      "group": "Marco 3 - Desenvolvimento"
-    },
-    {
-      "id": "1.4.6",
-      "level": 3,
-      "name": "1.3.3.3 Protótipo da interface",
-      "progress": 0,
-      "start": "20/06/2026",
-      "due": "23/06/2026",
-      "startISO": "2026-06-20",
-      "dueISO": "2026-06-23",
+      "progress": 40,
+      "start": "13/06/2026",
+      "due": "20/06/2026",
+      "startISO": "2026-06-13",
+      "dueISO": "2026-06-20",
       "owner": "Matheus Pereira",
       "completion": "-",
       "completionISO": null,
       "hours": "8",
-      "duration": "4",
+      "duration": "8",
+      "group": "Marco 3 - Desenvolvimento"
+    },
+    {
+      "id": "1.3.6",
+      "level": 3,
+      "name": "1.3.3.3 Protótipo da interface",
+      "progress": 0,
+      "start": "20/06/2026",
+      "due": "24/06/2026",
+      "startISO": "2026-06-20",
+      "dueISO": "2026-06-24",
+      "owner": "Matheus Pereira",
+      "completion": "-",
+      "completionISO": null,
+      "hours": "8",
+      "duration": "5",
       "group": "Marco 3 - Desenvolvimento"
     },
     {
@@ -184,15 +187,15 @@ const DATA = {
       "level": 3,
       "name": "1.4.1.1 Preparação de materiais de treinamento",
       "progress": 0,
-      "start": "23/06/2026",
-      "due": "25/06/2026",
-      "startISO": "2026-06-23",
-      "dueISO": "2026-06-25",
+      "start": "21/06/2026",
+      "due": "24/06/2026",
+      "startISO": "2026-06-21",
+      "dueISO": "2026-06-24",
       "owner": "Matheus Lucas",
       "completion": "-",
       "completionISO": null,
       "hours": "8",
-      "duration": "3",
+      "duration": "4",
       "group": "Marco 4 - Implementação"
     },
     {
@@ -216,10 +219,10 @@ const DATA = {
       "level": 3,
       "name": "1.4.1.2 sessões de treinamento",
       "progress": 0,
-      "start": "25/06/2026",
-      "due": "26/06/2026",
-      "startISO": "2026-06-25",
-      "dueISO": "2026-06-26",
+      "start": "26/06/2026",
+      "due": "27/06/2026",
+      "startISO": "2026-06-26",
+      "dueISO": "2026-06-27",
       "owner": "Matheus Lucas",
       "completion": "-",
       "completionISO": null,
@@ -276,7 +279,7 @@ const DATA = {
       "owner": "Matheus Lucas",
       "completion": "10/06/2026",
       "completionISO": "2026-06-10",
-      "hours": "19",
+      "hours": "24.5",
       "duration": "5",
       "group": "Marco 2 - Hardware-cotação e intalação",
       "type": "Marco",
@@ -286,15 +289,34 @@ const DATA = {
     {
       "id": "1.3",
       "level": 2,
+      "name": "Marco 3 - Desenvolvimento",
+      "progress": 58,
+      "start": "02/06/2026",
+      "due": "24/06/2026",
+      "startISO": "2026-06-02",
+      "dueISO": "2026-06-24",
+      "owner": "Matheus Lucas",
+      "completion": "-",
+      "completionISO": null,
+      "hours": "38",
+      "duration": "23",
+      "group": "Marco 3 - Desenvolvimento",
+      "type": "Marco",
+      "tasksTotal": 6,
+      "tasksDone": 2
+    },
+    {
+      "id": "1.4",
+      "level": 2,
       "name": "MUD-01 - Aprovação da mudança e contratação da nova ferramenta paga",
-      "progress": 100,
-      "start": "29/05/2026",
-      "due": "01/06/2026",
-      "startISO": "2026-05-29",
-      "dueISO": "2026-06-01",
-      "owner": "147",
-      "completion": "11/06/2026",
-      "completionISO": "2026-06-11",
+      "progress": 30,
+      "start": "10/06/2026",
+      "due": "13/06/2026",
+      "startISO": "2026-06-10",
+      "dueISO": "2026-06-13",
+      "owner": "Matheus Lucas",
+      "completion": "-",
+      "completionISO": null,
       "hours": null,
       "duration": "4",
       "group": "MUD-01 - Aprovação da mudança e contratação da nova ferramenta paga",
@@ -303,38 +325,19 @@ const DATA = {
       "tasksDone": 0
     },
     {
-      "id": "1.4",
-      "level": 2,
-      "name": "Marco 3 - Desenvolvimento",
-      "progress": 86,
-      "start": "02/06/2026",
-      "due": "23/06/2026",
-      "startISO": "2026-06-02",
-      "dueISO": "2026-06-23",
-      "owner": "Matheus Lucas",
-      "completion": "10/06/2026",
-      "completionISO": "2026-06-10",
-      "hours": "38",
-      "duration": "22",
-      "group": "Marco 3 - Desenvolvimento",
-      "type": "Marco",
-      "tasksTotal": 6,
-      "tasksDone": 5
-    },
-    {
       "id": "1.5",
       "level": 2,
       "name": "Marco 4 - Implementação",
       "progress": 0,
-      "start": "23/06/2026",
+      "start": "21/06/2026",
       "due": "30/06/2026",
-      "startISO": "2026-06-23",
+      "startISO": "2026-06-21",
       "dueISO": "2026-06-30",
       "owner": "Matheus Lucas",
       "completion": "-",
       "completionISO": null,
       "hours": "27",
-      "duration": "8",
+      "duration": "10",
       "group": "Marco 4 - Implementação",
       "type": "Marco",
       "tasksTotal": 4,
@@ -344,92 +347,140 @@ const DATA = {
   "risks": [
     {
       "code": "R09",
-      "risk": "Não recuperar o atraso dentro do prazo oficial de 30/06/2026",
+      "risk": "Atraso do projeto em relação ao planejado: 42% realizado contra 52% previsto",
       "prob": "Alta",
       "impact": "Alto",
       "severity": 16,
       "category": "Cronograma",
-      "response": "Mitigar com compressão de cronograma, paralelismo, priorização e daily tracking.",
+      "response": "Mitigar com acompanhamento diário, priorização de entregas críticas e replanejamento das atividades finais dentro do prazo oficial.",
       "owner": "Gerente do Projeto"
     },
     {
       "code": "R10",
-      "risk": "Perda de produtividade pela saída do desenvolvedor",
+      "risk": "Redução da capacidade técnica pela saída de um desenvolvedor",
       "prob": "Alta",
       "impact": "Alto",
       "severity": 16,
       "category": "Recursos",
-      "response": "Redistribuir tarefas, formalizar responsáveis e manter revisão por pares.",
-      "owner": "Gerente / TI"
+      "response": "Redistribuir atividades, formalizar substituto/responsável e revisar tarefas de interface, banco e integração.",
+      "owner": "Gerente do Projeto / Equipe Técnica"
     },
     {
       "code": "R11",
-      "risk": "Ferramenta paga não gerar ganho de produtividade esperado",
-      "prob": "Média",
-      "impact": "Alto",
+      "risk": "Ferramenta gratuita prevista no plano de aquisições não atender mais ao projeto",
+      "prob": "Alta",
+      "impact": "Médio",
       "severity": 12,
       "category": "Aquisições",
-      "response": "Homologar rapidamente e manter alternativa operacional manual.",
-      "owner": "TI / Desenvolvimento"
+      "response": "Conduzir cotação, homologação e aprovação rápida de solução paga substituta, com registro formal da mudança.",
+      "owner": "Gerente do Projeto / TI"
     },
     {
       "code": "R12",
-      "risk": "Falhas lógicas em entregas apoiadas por ferramenta/automação",
+      "risk": "Aumento de custo pela contratação de solução paga e esforço adicional de recuperação",
       "prob": "Média",
       "impact": "Alto",
       "severity": 12,
-      "category": "Qualidade",
-      "response": "Revisão humana obrigatória, testes unitários, integração e homologação.",
-      "owner": "Desenvolvimento / TI"
+      "category": "Custos",
+      "response": "Atualizar baseline de custos, aprovar variação com patrocinador e monitorar custo revisado no status report.",
+      "owner": "Gerente do Projeto"
     },
     {
       "code": "R13",
-      "risk": "Custo adicional não aprovado ou controlado",
+      "risk": "Acúmulo de atividades finais pode comprometer testes, treinamento e homologação",
       "prob": "Média",
-      "impact": "Médio",
-      "severity": 9,
-      "category": "Custos",
-      "response": "Formalizar aprovação do patrocinador e monitorar variação em status report.",
-      "owner": "Gerente do Projeto"
+      "impact": "Alto",
+      "severity": 12,
+      "category": "Qualidade/Prazo",
+      "response": "Executar atividades em paralelo quando viável, reforçar testes finais e acompanhar impedimentos até o encerramento.",
+      "owner": "Gerente do Projeto / Qualidade"
     }
   ],
   "actions": [
     {
-      "title": "Manter o prazo oficial em 30/06/2026",
-      "text": "O cronograma foi replanejado para manter a restrição de quatro meses. O foco é recuperar o desvio com paralelismo e priorização."
-    },
-    {
-      "title": "Executar atividades críticas em paralelo",
-      "text": "Protótipo, materiais de treinamento, migração e testes finais devem ser acompanhados diariamente para evitar acúmulo no final do mês."
+      "title": "Executar plano de recuperação do cronograma",
+      "text": "O projeto está 10 pontos percentuais abaixo do planejado. As atividades finais devem ser acompanhadas diariamente para manter o prazo oficial de 30/06/2026."
     },
     {
       "title": "Redistribuir atividades do desenvolvedor desligado",
-      "text": "Responsabilidade formal deve permanecer com equipe humana, usando a ferramenta paga apenas como apoio técnico."
+      "text": "As tarefas de modelagem, configuração, interface e protótipo devem ter responsável confirmado, com apoio da equipe remanescente e validação do gerente do projeto."
     },
     {
-      "title": "Aplicar controle de qualidade reforçado",
-      "text": "Toda entrega apoiada pela nova ferramenta deve passar por revisão humana, testes de integração e homologação."
+      "title": "Formalizar aquisição da ferramenta substituta",
+      "text": "A ferramenta gratuita deixou de atender às necessidades do projeto. A aquisição de solução paga deve ser cotada, aprovada e registrada no plano de aquisições."
     },
     {
-      "title": "Controlar custo adicional",
-      "text": "Variação de R$ 1.320,00 deve ficar registrada no plano de custos e status report."
+      "title": "Atualizar e controlar o custo revisado",
+      "text": "O custo-base de R$ 104.524,57 foi revisado para R$ 110.424,57, gerando variação de R$ 5.900,00, equivalente a 5,64%."
+    },
+    {
+      "title": "Proteger testes, treinamento e implantação",
+      "text": "Como as entregas finais ficaram comprimidas, testes finais, migração e treinamento devem ser tratados como atividades críticas de controle."
     }
   ],
   "nextTasks": [
     {
-      "id": "1.4.6",
+      "id": "1.3.2",
       "level": 3,
-      "name": "1.3.3.3 Protótipo da interface",
-      "progress": 0,
-      "start": "20/06/2026",
-      "due": "23/06/2026",
-      "startISO": "2026-06-20",
-      "dueISO": "2026-06-23",
+      "name": "1.3.2.1 Modelagem de dados",
+      "progress": 70,
+      "start": "04/06/2026",
+      "due": "07/06/2026",
+      "startISO": "2026-06-04",
+      "dueISO": "2026-06-07",
+      "owner": "Substituto pendente",
+      "completion": "-",
+      "completionISO": null,
+      "hours": "3",
+      "duration": "4",
+      "group": "Marco 3 - Desenvolvimento"
+    },
+    {
+      "id": "1.3.3",
+      "level": 3,
+      "name": "1.3.2.2 Configuração do Banco de dados",
+      "progress": 70,
+      "start": "08/06/2026",
+      "due": "10/06/2026",
+      "startISO": "2026-06-08",
+      "dueISO": "2026-06-10",
+      "owner": "Substituto pendente",
+      "completion": "-",
+      "completionISO": null,
+      "hours": "3",
+      "duration": "3",
+      "group": "Marco 3 - Desenvolvimento"
+    },
+    {
+      "id": "1.3.5",
+      "level": 3,
+      "name": "1.3.3.2 Desenvolvimento da interface",
+      "progress": 40,
+      "start": "13/06/2026",
+      "due": "20/06/2026",
+      "startISO": "2026-06-13",
+      "dueISO": "2026-06-20",
       "owner": "Matheus Pereira",
       "completion": "-",
       "completionISO": null,
       "hours": "8",
-      "duration": "4",
+      "duration": "8",
+      "group": "Marco 3 - Desenvolvimento"
+    },
+    {
+      "id": "1.3.6",
+      "level": 3,
+      "name": "1.3.3.3 Protótipo da interface",
+      "progress": 0,
+      "start": "20/06/2026",
+      "due": "24/06/2026",
+      "startISO": "2026-06-20",
+      "dueISO": "2026-06-24",
+      "owner": "Matheus Pereira",
+      "completion": "-",
+      "completionISO": null,
+      "hours": "8",
+      "duration": "5",
       "group": "Marco 3 - Desenvolvimento"
     },
     {
@@ -437,15 +488,15 @@ const DATA = {
       "level": 3,
       "name": "1.4.1.1 Preparação de materiais de treinamento",
       "progress": 0,
-      "start": "23/06/2026",
-      "due": "25/06/2026",
-      "startISO": "2026-06-23",
-      "dueISO": "2026-06-25",
+      "start": "21/06/2026",
+      "due": "24/06/2026",
+      "startISO": "2026-06-21",
+      "dueISO": "2026-06-24",
       "owner": "Matheus Lucas",
       "completion": "-",
       "completionISO": null,
       "hours": "8",
-      "duration": "3",
+      "duration": "4",
       "group": "Marco 4 - Implementação"
     },
     {
@@ -463,42 +514,10 @@ const DATA = {
       "hours": "3",
       "duration": "4",
       "group": "Marco 4 - Implementação"
-    },
-    {
-      "id": "1.5.3",
-      "level": 3,
-      "name": "1.4.1.2 sessões de treinamento",
-      "progress": 0,
-      "start": "25/06/2026",
-      "due": "26/06/2026",
-      "startISO": "2026-06-25",
-      "dueISO": "2026-06-26",
-      "owner": "Matheus Lucas",
-      "completion": "-",
-      "completionISO": null,
-      "hours": "8",
-      "duration": "2",
-      "group": "Marco 4 - Implementação"
-    },
-    {
-      "id": "1.5.4",
-      "level": 3,
-      "name": "1.4.2.2 Testes finais",
-      "progress": 0,
-      "start": "27/06/2026",
-      "due": "30/06/2026",
-      "startISO": "2026-06-27",
-      "dueISO": "2026-06-30",
-      "owner": "Armando",
-      "completion": "-",
-      "completionISO": null,
-      "hours": "8",
-      "duration": "4",
-      "group": "Marco 4 - Implementação"
     }
   ],
-  "timelineStart": "2026-01-06",
-  "timelineEnd": "2026-11-06"
+  "timelineStart": "2026-03-09",
+  "timelineEnd": "2026-06-30"
 };
 
 const qs = (s, root=document) => root.querySelector(s);
@@ -513,16 +532,23 @@ const clamp = (n,min,max) => Math.min(max, Math.max(min,n));
 
 function statusOf(item){
   if(item.progress >= 100) return 'done';
+  if(DATA.overdueTasks.includes(item.id)) return 'overdue';
   if(item.progress > 0) return 'progress';
   return 'pending';
 }
 function statusLabel(item){
-  if(item.progress >= 100) return 'Concluída';
-  if(item.progress > 0) return 'Em andamento';
+  const st = statusOf(item);
+  if(st === 'done') return 'Concluída';
+  if(st === 'overdue') return 'Atrasada';
+  if(st === 'progress') return 'Em andamento';
   return 'Pendente';
 }
 function statusClass(item){
-  return statusOf(item) === 'done' ? 'status-done' : statusOf(item) === 'progress' ? 'status-progress' : 'status-pending';
+  const st = statusOf(item);
+  if(st === 'done') return 'status-done';
+  if(st === 'overdue') return 'status-overdue';
+  if(st === 'progress') return 'status-progress';
+  return 'status-pending';
 }
 
 function updateHero(){
@@ -530,7 +556,8 @@ function updateHero(){
   qs('#overallValue').textContent = `${DATA.overallProgress}%`;
   qs('#statusPill').textContent = DATA.statusLabel;
   qs('#statusPill').classList.toggle('ok', DATA.statusTone === 'ok');
-  qs('#statusNote').textContent = `Data de status: ${DATA.statusDate}. Prazo oficial mantido em ${DATA.deadline}.`;
+  qs('#statusPill').classList.toggle('critical', DATA.statusTone === 'warning');
+  qs('#statusNote').textContent = `Data de status: ${DATA.statusDate}. Prazo oficial mantido em ${DATA.deadline}, porém com necessidade de ação corretiva.`;
   const deg = DATA.overallProgress * 3.6;
   qs('#overallDonut').style.background =
     `conic-gradient(var(--green) 0deg, var(--blue) ${Math.max(20, deg)}deg, rgba(255,255,255,.08) ${deg}deg 360deg)`;
@@ -552,14 +579,14 @@ function updateKPIs(){
   const trendText = DATA.deviation >= 0 ? `+${DATA.deviation} p.p.` : `${DATA.deviation} p.p.`;
   qs('#trendBadge').textContent = trendText;
   qs('#progressInsight').textContent = DATA.deviation >= 0
-    ? `Após o replanejamento do Gantt, o progresso consolidado ficou acima da referência RA3. Apesar disso, o projeto continua com atenção porque as atividades finais estão concentradas até 30/06/2026.`
-    : `O projeto apresenta desvio negativo de progresso e precisa manter o plano de recuperação para proteger o prazo final.`;
+    ? `O projeto está acima do planejado. Mesmo assim, deve manter acompanhamento de riscos e custos.`
+    : `O projeto está com ${DATA.overallProgress}% concluído contra ${DATA.plannedProgress}% planejado, gerando desvio de ${DATA.deviation} p.p. A prioridade é recuperar o atraso sem alterar o prazo oficial.`;
   qs('#baseCost').textContent = fmtMoney(DATA.baseCost);
   qs('#revisedCost').textContent = fmtMoney(DATA.revisedCost);
   qs('#costVariation').textContent = `+${fmtMoney(DATA.costDelta)}`;
   qs('#costVariationPct').textContent = `+${DATA.costDeltaPct}% sobre o custo-base`;
   qs('#costDeltaBar').style.width = `${clamp(DATA.costDeltaPct * 18, 8, 100)}%`;
-  qs('#costInsight').textContent = `A mudança RA3 adicionou ${fmtMoney(DATA.costDelta)} ao custo-base, principalmente pela substituição da ferramenta gratuita por solução paga de apoio.`;
+  qs('#costInsight').textContent = `A situação atual adicionou ${fmtMoney(DATA.costDelta)} ao custo-base, envolvendo solução paga substituta e esforço adicional de recuperação/replanejamento.`;
   qs('#doneCount').textContent = DATA.doneTasks;
   qs('#pendingCount').textContent = DATA.pendingTasks;
   qs('#overdueCount').textContent = DATA.overdueTasks.length;
@@ -581,7 +608,7 @@ function renderTimelineAxis(){
 function renderGantt(filter='all'){
   const board = qs('#ganttBoard');
   const totalDays = Math.max(1, daysBetween(DATA.timelineStart, DATA.timelineEnd));
-  const criticalNames = ['Protótipo', 'Migração', 'Testes finais', 'Treinamento'];
+  const criticalNames = ['MUD-01', 'Modelagem', 'Banco de dados', 'Desenvolvimento da interface', 'Protótipo', 'Migração', 'Testes finais', 'Treinamento'];
   let items = DATA.tasks.filter(t => {
     const st = statusOf(t);
     const critical = criticalNames.some(c => t.name.toLowerCase().includes(c.toLowerCase()));
@@ -597,7 +624,7 @@ function renderGantt(filter='all'){
     const width = clamp((duration / totalDays) * 100, 1.5, 100-left);
     const st = statusOf(t);
     const critical = criticalNames.some(c => t.name.toLowerCase().includes(c.toLowerCase()));
-    const barClass = st === 'pending' ? (critical ? 'critical' : 'pending') : '';
+    const barClass = st === 'overdue' ? 'critical' : st === 'pending' ? (critical ? 'critical' : 'pending') : '';
     const tooltip = `${t.name}<br>Responsável: ${t.owner}<br>Período: ${fmtDate(t.startISO)} a ${fmtDate(t.dueISO)}<br>Progresso: ${t.progress}%`;
     return `<div class="gantt-row" data-status="${st}" data-name="${t.name.toLowerCase()}">
       <div class="gantt-name">${t.name}</div>
@@ -612,7 +639,7 @@ function renderGantt(filter='all'){
 
 function renderMilestones(){
   qs('#milestoneList').innerHTML = DATA.milestones.map(m => {
-    const label = m.type === 'Mudança' ? 'Mudança aprovada' : `${m.tasksDone}/${m.tasksTotal} tarefas`;
+    const label = m.type === 'Mudança' ? 'Mudança em andamento' : `${m.tasksDone}/${m.tasksTotal} tarefas`; 
     return `<div class="milestone">
       <div class="milestone-head">
         <strong>${m.name}</strong>
@@ -699,7 +726,7 @@ function bindControls(){
     },
     schedule: {
       title:'Indicador de prazo',
-      body:`O prazo oficial permanece em ${DATA.deadline}, respeitando a restrição de quatro meses. Restam ${DATA.remainingDays} dias a partir da data de status ${DATA.statusDate}.`
+      body:`O prazo oficial permanece em ${DATA.deadline}, respeitando a restrição de quatro meses. O cronograma, porém, está em atenção por causa do desvio de -10 p.p., saída do desenvolvedor e aquisição emergencial da ferramenta substituta. Restam ${DATA.remainingDays} dias a partir da data de status ${DATA.statusDate}.`
     },
     cost: {
       title:'Indicador de custo',
@@ -707,7 +734,7 @@ function bindControls(){
     },
     tasks: {
       title:'Entregas previstas x realizadas',
-      body:`Foram concluídas ${DATA.doneTasks} de ${DATA.totalTasks} tarefas da EAP. Permanecem ${DATA.pendingTasks} tarefas pendentes, concentradas no protótipo, implementação, migração, treinamento e testes finais.`
+      body:`Foram concluídas ${DATA.doneTasks} de ${DATA.totalTasks} tarefas da EAP. Permanecem ${DATA.pendingTasks} tarefas pendentes e atividades em andamento críticas, concentradas em banco de dados, interface, protótipo, migração, treinamento e testes finais.`
     }
   };
   qsa('.kpi-card[data-modal]').forEach(card => card.addEventListener('click', () => {
