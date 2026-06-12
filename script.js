@@ -347,54 +347,44 @@ const DATA = {
   ],
   "risks": [
     {
-      "code": "R09",
-      "risk": "Atraso do projeto em relação ao planejado: 42% realizado contra 52% previsto",
-      "prob": "Alta",
-      "impact": "Alto",
-      "severity": 16,
-      "category": "Cronograma",
-      "response": "Mitigar com acompanhamento diário, priorização de entregas críticas e replanejamento das atividades finais dentro do prazo oficial.",
-      "owner": "Gerente do Projeto"
-    },
-    {
-      "code": "R10",
-      "risk": "Redução da capacidade técnica pela saída de um desenvolvedor",
-      "prob": "Alta",
-      "impact": "Alto",
-      "severity": 16,
-      "category": "Recursos",
-      "response": "Redistribuir atividades, formalizar substituto/responsável e revisar tarefas de interface, banco e integração.",
-      "owner": "Gerente do Projeto / Equipe Técnica"
-    },
-    {
       "code": "R11",
-      "risk": "Ferramenta gratuita prevista no plano de aquisições não atender mais ao projeto",
+      "risk": "Atraso no cronograma por desempenho abaixo do planejado (42% realizado x 52% planejado)",
       "prob": "Alta",
-      "impact": "Médio",
-      "severity": 12,
-      "category": "Aquisições",
-      "response": "Conduzir cotação, homologação e aprovação rápida de solução paga substituta, com registro formal da mudança.",
-      "owner": "Gerente do Projeto / TI"
+      "impact": "Muito Alto",
+      "severity": 20,
+      "category": "Cronograma",
+      "response": "Replanejar atividades intermediárias, priorizar entregas críticas, acompanhar o desvio semanalmente e redistribuir tarefas.",
+      "owner": "Gerente de Projeto"
     },
     {
       "code": "R12",
-      "risk": "Aumento de custo pela contratação de solução paga e esforço adicional de recuperação",
+      "risk": "Saída de desenvolvedor do projeto",
+      "prob": "Muito Alta",
+      "impact": "Alto",
+      "severity": 20,
+      "category": "Recursos",
+      "response": "Redistribuir atividades, definir substituto para o frontend, priorizar funcionalidades críticas e acompanhar produtividade.",
+      "owner": "Gerente de Projeto"
+    },
+    {
+      "code": "R13",
+      "risk": "Ferramenta gratuita prevista deixou de atender e exige solução paga",
+      "prob": "Alta",
+      "impact": "Alto",
+      "severity": 16,
+      "category": "Aquisições",
+      "response": "Avaliar fornecedores, aprovar aquisição emergencial, atualizar plano de aquisições e registrar impacto no orçamento.",
+      "owner": "Gerente de Projeto"
+    },
+    {
+      "code": "R14",
+      "risk": "Aumento de custo por contratação de ferramenta paga e esforço adicional de replanejamento",
       "prob": "Média",
       "impact": "Alto",
       "severity": 12,
       "category": "Custos",
-      "response": "Atualizar baseline de custos, aprovar variação com patrocinador, controlar a reserva de contingência e monitorar custo revisado no status report.",
-      "owner": "Gerente do Projeto"
-    },
-    {
-      "code": "R13",
-      "risk": "Acúmulo de atividades finais pode comprometer testes, treinamento e homologação",
-      "prob": "Média",
-      "impact": "Alto",
-      "severity": 12,
-      "category": "Qualidade/Prazo",
-      "response": "Executar atividades em paralelo quando viável, reforçar testes finais e acompanhar impedimentos até o encerramento.",
-      "owner": "Gerente do Projeto / Qualidade"
+      "response": "Revisar baseline de custos, atualizar estimativa no término e aprovar variação orçamentária com o patrocinador.",
+      "owner": "Gerente de Projeto / Patrocinador"
     }
   ],
   "actions": [
